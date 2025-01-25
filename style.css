@@ -1,0 +1,144 @@
+/*! imports  */
+@font-face {
+    font-family: 'Montserrat';
+    src: url(./assets/fonts/Montserrat-Bold.ttf);
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url(./assets/fonts/Montserrat-Medium.ttf);
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Fraunces';
+    src: url(./assets/fonts/Fraunces_9pt_Soft-Bold.ttf);
+    font-weight: 700;
+}
+/*! reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+img {
+    max-width: 100%;
+}
+/*! global */
+:root {
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+body {
+    background-color: var(--Cream);
+    font-family: 'Montserrat';
+}
+h1 {
+    font-family: 'Fraunces', serif;
+    width: 52%;
+    margin: 10px;
+}
+/*! body content */
+/* start container */
+.container {
+    background-color: var(--White);
+    width: 604px;
+    height: 390px;
+    margin: 4em auto;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+}
+/* image */
+.picture img {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+/* start text content */
+#content {
+    margin: 20px;
+    margin-right: 10px;
+}
+.header {
+    color: var(--Dark-grayish-blue);
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    letter-spacing: 5px;
+}
+.paragraph {
+    color: var(--Dark-grayish-blue);
+    margin: 10px;
+    line-height: 20px;
+    font-size: 12px;
+}
+#price {
+    display: flex;
+    margin: 10px;
+    align-items: center;
+}
+.first-price {
+    color: var(--Dark-cyan);
+    font-size: 30px;
+    font-family: 'Fraunces';
+}
+.old-price {
+    color: var(--Dark-grayish-blue);
+    text-decoration: line-through;
+    margin-left: 10px;
+}
+.button button {
+    color: var(--White);
+    background-color: var(--Dark-cyan);
+    width: 85%;
+    height: 40px;
+    margin-top: 2.5em;
+    border-radius: 10px;
+    border: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button button:hover {
+    background-color: rgb(5, 62, 8);
+}
+.cart {
+    margin: 10px;
+}
+/* start footer */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a {color:var(--Dark-cyan); }
+/*! image query */
+@media (max-width: 768px) {
+    h1{
+        width: 80% 
+    }
+    .header{
+        margin-left: 10px;
+    }
+    .container {
+        flex-direction: column; 
+        width: 80%;
+        height: auto;
+    }
+    .picture img {
+        width: 100%;
+        border-radius: 15px 15px 0 0; 
+        content: url("./assets/images/image-product-mobile.jpg");
+    }
+    #content {
+        margin: 20px 10px;
+        text-align: left; 
+    }
+    .button button {
+        width: 100%; 
+    }
+}
