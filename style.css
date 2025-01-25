@@ -53,6 +53,7 @@ h1 {
     width: 604px;
     height: 390px;
     margin: 4em auto;
+    margin-top: 10em;
     display: flex;
     justify-content: center;
     border-radius: 15px;
@@ -128,6 +129,7 @@ h1 {
         flex-direction: column; 
         width: 80%;
         height: auto;
+        margin-top: 5em;
     }
     .picture img {
         width: 100%;
